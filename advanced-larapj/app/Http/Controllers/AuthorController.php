@@ -66,5 +66,13 @@ class AuthorController extends Controller
         Author::find($request->id)->delete();
         return redirect('/');
     }
+
+    public function bind(Author $author)
+    {
+        $data =[
+            'author' => $author,
+        ];
+        return view('author.binds', $data);
+    }
     
 }
