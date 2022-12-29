@@ -17,8 +17,8 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->integer('author_id');
             $table->string('title');
-            $table->timestamps('created_at')->useCurrent()->nullable;
-            $table->timestamps('updated_at')->useCurrent()->nullable;
+            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
