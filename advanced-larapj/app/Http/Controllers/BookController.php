@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index(Request $request)
     {
-        $books = Book::all();
+        $books = Book::with('author')->get();
         return view('book.index', ['books' =>$books]);
     }
 
