@@ -22,6 +22,6 @@ class BookController extends Controller
     {
         $form = $request ->all();
         Book::create($form);
-        return view('/book');
+        return redirect('/book');
     }
 }

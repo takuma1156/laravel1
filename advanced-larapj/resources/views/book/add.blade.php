@@ -22,16 +22,16 @@ button {
 @section('title', 'book.add.blade.php')
 
 @section('content')
-@if(count($error) > 0)
+@if (count($errors) > 0)
 <ul>
-  @foreach ($errors ->all() as $error)
+  @foreach ($errors->all() as $error)
   <li>
     {{$error}}
   </li>
   @endforeach
 </ul>
 @endif
-<form action="/book/add" method ="post">
+<form action="/book/add" method="post">
   <table>
     @csrf
     <tr>
@@ -39,7 +39,7 @@ button {
       <td><input type="number" name="author_id"></td>
     </tr>
     <tr>
-      <th>title</th>
+      <th>title:</th>
       <td><input type="text" name="title"></td>
     </tr>
   </table>

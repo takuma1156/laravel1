@@ -18,5 +18,6 @@ class BooksTableSeeder extends Seeder
             'author_id' =>1,
             'title' =>'GODIVA',
         ];
+        Book::create($param);
     }
 }
