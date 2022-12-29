@@ -32,3 +32,4 @@ Route::prefix('book')->group(function () {//以下を追記
     Route::get('/add', [BookController::class, 'add']);
     Route::post('/add', [BookController::class, 'create']);
 });
+Route::get('/relation', [AuthorController::class, 'relate']);
