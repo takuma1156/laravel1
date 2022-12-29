@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use App\Http\Middleware\FirstMiddleware;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\SessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,7 @@ Route::prefix('book')->group(function () {//以下を追記
     Route::post('/add', [BookController::class, 'create']);
 });
 Route::get('/relation', [AuthorController::class, 'relate']);
+Route::get('/session', [SessionController::class, 'getSes']);
+Route::post('/session', [SessionController::class, 'postSes']);
+Route::get('/back', [SessionController::class, 'backHome']);
+

@@ -10,7 +10,7 @@ class AuthorController extends Controller
 {
     public function index()
     {
-        $authors = Author::all();
+        $authors = Author::Paginate(3);
         return view('index', ['authors' => $authors]);
     }
 
@@ -90,7 +90,7 @@ class AuthorController extends Controller
         ];
         return view('middleware', $text);
     }
-    
+
     public function relate(Request $request)
     {
     $hasbooks = Author::has('book')->get();
